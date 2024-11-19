@@ -1,14 +1,15 @@
 import React from 'react';
 
 const PersonCard = ({ person }) => {
-    const { serviceName, category, pricing, counselorName, rating, learnMore } = person;
+    const { serviceName, category, pricing, counselorName, rating, learnMore, image } = person;
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
+                        className='w-full p-2 h-[250px] rounded-sm'
+                        src={person.image}
+                        alt="councelor" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{serviceName}</h2>

@@ -1,103 +1,102 @@
 [
     {
       "id": 1,
-      "image": "https://example.com/images/career_planning.jpg",
+      "image": "https://i.ibb.co.com/G3jCtxs/1.jpg",
       "serviceName": "Career Planning Session",
       "category": "Planning & Strategy",
       "pricing": 50,
       "counselorName": "Dr. Emily Carter",
       "rating": 4.8,
-      "learnMore": "https://example.com/services/career-planning"
+      "learnMore": "Read More"
     },
     {
       "id": 2,
-      "image": "https://example.com/images/resume_building.jpg",
+      "image": "https://i.ibb.co.com/Nszjk6c/2.jpg",
       "serviceName": "Resume Building Assistance",
       "category": "Job Application Support",
       "pricing": 30,
       "counselorName": "Mr. David Lee",
       "rating": 4.6,
-      "learnMore": "https://example.com/services/resume-building"
+      "learnMore": "Read More"
     },
     {
       "id": 3,
-      "image": "https://example.com/images/interview_preparation.jpg",
+      "image": "https://i.ibb.co.com/Y36M9GX/3.jpg",
       "serviceName": "Mock Interview Sessions",
       "category": "Skill Development",
       "pricing": 40,
       "counselorName": "Ms. Sarah Johnson",
       "rating": 4.9,
-      "learnMore": "https://example.com/services/interview-preparation"
+      "learnMore": "Read More"
     },
     {
       "id": 4,
-      "image": "https://example.com/images/skill_assessment.jpg",
+      "image": "https://i.ibb.co.com/3SyJwsG/4.jpg",
       "serviceName": "Skill Assessment",
       "category": "Career Evaluation",
       "pricing": 20,
       "counselorName": "Dr. Michael Brown",
       "rating": 4.7,
-      "learnMore": "https://example.com/services/skill-assessment"
+      "learnMore": "Read More"
     },
     {
       "id": 5,
-      "image": "https://example.com/images/networking_tips.jpg",
+      "image": "https://i.ibb.co.com/0y8fnpz/5.jpg",
       "serviceName": "Networking Tips & Tricks",
       "category": "Professional Growth",
       "pricing": 25,
       "counselorName": "Ms. Anna Wilson",
       "rating": 4.5,
-      "learnMore": "https://example.com/services/networking-tips"
+      "learnMore": "Read More"
     },
     {
       "id": 6,
-      "image": "https://example.com/images/industry_insights.jpg",
+      "image": "https://i.ibb.co.com/pjzJmqp/6.jpg",
       "serviceName": "Industry Insights & Trends",
       "category": "Market Research",
       "pricing": 35,
       "counselorName": "Dr. Richard Green",
       "rating": 4.6,
-      "learnMore": "https://example.com/services/industry-insights"
+      "learnMore": "Read More"
     },
     {
       "id": 7,
-      "image": "https://example.com/images/career_change.jpg",
+      "image": "https://i.ibb.co.com/sP5Nzbr/7.jpg",
       "serviceName": "Career Change Guidance",
       "category": "Transition Support",
       "pricing": 45,
       "counselorName": "Ms. Olivia Martinez",
       "rating": 4.8,
-      "learnMore": "https://example.com/services/career-change"
+      "learnMore": "Read More"
     },
     {
       "id": 8,
-      "image": "https://example.com/images/personal_branding.jpg",
+      "image": "https://i.ibb.co.com/wCTB716/8.jpg",
       "serviceName": "Personal Branding Strategies",
       "category": "Professional Growth",
       "pricing": 50,
       "counselorName": "Mr. Chris Evans",
       "rating": 4.9,
-      "learnMore": "https://example.com/services/personal-branding"
+      "learnMore": "Read More"
     },
     {
       "id": 9,
-      "image": "https://example.com/images/scholarship_guidance.jpg",
+      "image": "https://i.ibb.co.com/zF9tj9X/9.jpg",
       "serviceName": "Scholarship Application Guidance",
       "category": "Educational Support",
       "pricing": 30,
       "counselorName": "Ms. Laura Smith",
       "rating": 4.7,
-      "learnMore": "https://example.com/services/scholarship-guidance"
+      "learnMore": "Read More"
     },
     {
       "id": 10,
-      "image": "https://example.com/images/certification_guidance.jpg",
+      "image": "https://i.ibb.co.com/9VR19Tt/10.jpg",
       "serviceName": "Certification Pathways",
       "category": "Skill Enhancement",
       "pricing": 40,
       "counselorName": "Dr. Daniel Moore",
       "rating": 4.6,
-      "learnMore": "https://example.com/services/certification-guidance"
+      "learnMore": "Read More"
     }
   ]
-  

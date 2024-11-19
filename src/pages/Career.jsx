@@ -8,10 +8,9 @@ const Career = () => {
     console.log('Data', persons);
     
     return (
-        <div>
-            <h2>Abir</h2>
-            <h2>Data {persons.length}</h2>
-            <div>
+        <div className='w-11/12 mx-auto'>
+            <h2>Councelor {persons.length}</h2>
+            <div className='grid grid-cols-3'>
                 {persons.map((person) => (
                    <PersonCard key={person.id} person={person}></PersonCard>
                 ))}
