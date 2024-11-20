@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PersonCard = ({ person }) => {
+const PersonCard = ({ person}) => {
     const { serviceName, category, pricing, counselorName, rating, learnMore, image } = person;
     return (
         <div>
@@ -19,7 +19,9 @@ const PersonCard = ({ person }) => {
                     <p>Name: {counselorName}</p>
                     <p>Ratting {rating}</p>
                     <div className="card-actions justify-end">
-                    <Link className="btn btn-primary">Learn More</Link>
+                        <Link>
+                            <button className="btn btn-primary">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>

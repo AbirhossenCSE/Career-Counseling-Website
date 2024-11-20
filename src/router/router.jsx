@@ -5,6 +5,7 @@ import Career from '../pages/Career';
 import AuthLayout from '../layouts/AuthLayout';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import Details from '../pages/Details';
 
 
 
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <HomeLayout></HomeLayout>,
+        loader: async () => {
+            const res = await fetch('/services.json');
+            return res.json(); // Fetch data once at the parent level
+        },
         children:[
             {
                 path: '/',
@@ -22,10 +27,15 @@ const router = createBrowserRouter([
                 path: '/career',
                 element: <Career></Career>,
                 loader: () => fetch('career.json')
-            }
+            },
+            {
+                path: '/details/:id',
+                element: <Details></Details>,
+            },
         ]
        
     },
+
     {
         path: 'auth',
         element: <AuthLayout></AuthLayout>,
@@ -39,6 +49,10 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
         ]
+    },
+    {
+        path: '*',
+        element: <h1>Error</h1>
     },
     
 

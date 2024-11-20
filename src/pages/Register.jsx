@@ -2,6 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Register = () => {
 
     const { createNewUser, setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
@@ -39,9 +42,19 @@ const Register = () => {
         signInWithGoogle()
         .then(result =>{
             console.log(result.user);
-            navigate('/')
+            const user = result.user;
+            toast.success('Successfully logged in with Google!', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            navigate('/');
+            setUser(user)
         })
-        .catch(error => console.log('ERROR', error.message))
+        .catch((error) => {
+            console.error('ERROR', error.message);
+            toast.error('Failed to log in with Google.', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        });
     }
 
 
@@ -86,8 +99,11 @@ const Register = () => {
                 </form>
                 <p className='text-center font-semibold'>Already Have An Account ? <Link className='text-red-500' to='/auth/login'>Login</Link> </p>
 
-                <p onClick={handleGoogleSignIn} className='btn btn-ghost'>Login With Google</p>
+                <div>
+                    <p onClick={handleGoogleSignIn} className='btn btn-ghost'>Login With Google</p>
+                </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
