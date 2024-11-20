@@ -2,6 +2,9 @@ import React from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import HomeLayout from '../layouts/HomeLayout';
 import Career from '../pages/Career';
+import AuthLayout from '../layouts/AuthLayout';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 
 
@@ -21,6 +24,20 @@ const router = createBrowserRouter([
             }
         ]
        
+    },
+    {
+        path: 'auth',
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: '/auth/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/auth/register',
+                element: <Register></Register>
+            },
+        ]
     },
     
 
