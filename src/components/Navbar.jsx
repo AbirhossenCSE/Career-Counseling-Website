@@ -4,6 +4,8 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
     const { user, LogOut } = useContext(AuthContext);
+    console.log(user);
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -40,14 +42,32 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <div>
+                {/* <div>
                     {
-                        user && user?.email ? ( <div><p>{user?.email}</p></div> ) : ( <p>No User</p> )
+                        user && user?.email ? ( <div><img className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> <p>{user?.displayName}</p></div> ) : ( <p>No User</p> )
                     }
                     
+            </div> */}
+                <div className="relative group w-8 h-8 mr-5">
+                    {user?.email ? (
+                        <div className="flex flex-col items-center">
+                            <img
+                                className="w-8 h-8 rounded-full cursor-pointer"
+                                src={user?.photoURL}
+                                alt="User Profile"
+                            />
+                            <p className="absolute bottom-[-64px] bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                {user?.displayName}
+                            </p>
+                        </div>
+                    ) : (
+                        <p>No User</p>
+                    )}
                 </div>
+
+
                 {
-                    user && user?.email ? ( <button onClick={LogOut} className='btn btn-neutral rounded-none'>LogOut</button> ) : (<Link to='/auth/login' className='btn btn-neutral rounded-none'>Login</Link>)
+                    user && user?.email ? (<button onClick={LogOut} className='btn btn-neutral rounded-none'>LogOut</button>) : (<Link to='/auth/login' className='btn btn-neutral rounded-none'>Login</Link>)
                 }
             </div>
         </div>

@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
 
-    const { createNewUser, setUser } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const handleSubmit = (e) =>{
         e.preventDefault();
 
@@ -12,13 +14,19 @@ const Register = () => {
         const name = form.get('name')
         const email = form.get('email')
         const photo = form.get('photo')
-        const password = form.get('password')
-        console.log(name, email, photo, password);  
+        const password = form.get('password')  
 
         createNewUser(email, password)
         .then((result) =>{
             const user = result.user;
             setUser(user);
+            updateUserProfile({ displayName: name, photoURL: photo })
+            .then(() => {
+                navigate('/');
+            })
+            .catch(err =>{
+                
+            })
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -26,6 +34,16 @@ const Register = () => {
         });
 
     }
+
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result =>{
+            console.log(result.user);
+            navigate('/')
+        })
+        .catch(error => console.log('ERROR', error.message))
+    }
+
 
     return (
         <div className='min-h-screen flex justify-center items-center'> 
@@ -63,10 +81,12 @@ const Register = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-neutral rounded-none">Register</button>
+                        <button className="btn btn-neutral rounded-xl">Register</button>
                     </div>
                 </form>
                 <p className='text-center font-semibold'>Already Have An Account ? <Link className='text-red-500' to='/auth/login'>Login</Link> </p>
+
+                <p onClick={handleGoogleSignIn} className='btn btn-ghost'>Login With Google</p>
             </div>
         </div>
     );
