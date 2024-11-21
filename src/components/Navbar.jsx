@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import UserIcon from '../assets/user.png'
 
 const Navbar = () => {
     const { user, LogOut } = useContext(AuthContext);
@@ -76,7 +77,7 @@ const Navbar = () => {
                             </p>
                         </div>
                     ) : (
-                        <p>No User</p>
+                        <img src={UserIcon} alt="" />
                     )}
                 </div>
 
