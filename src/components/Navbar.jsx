@@ -39,6 +39,7 @@ const Navbar = () => {
                         <Link to="/" className={getLinkClass('/')}>Service</Link>
                         <Link to="/profile" className={getLinkClass('/profile')}>Profile</Link>
                         <Link to="/contact" className={getLinkClass('/contact')}>Contact Us</Link>
+                        <Link to="/update" className={getLinkClass('/update')}>Update Profile</Link>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Career</a>
@@ -49,6 +50,7 @@ const Navbar = () => {
                     <Link to="/" className={`mr-2 ${getLinkClass('/')}`}>Service</Link>
                     <Link to="/profile" className={`mr-2 ${getLinkClass('/profile')}`}>My Profile</Link>
                     <Link to="/contact" className={`mr-2 ${getLinkClass('/contact')}`}>Contact Us</Link>
+                    <Link to="/update" className={`mr-2 ${getLinkClass('/update')}`}>Update Profile</Link>
                 </ul>
             </div>
 

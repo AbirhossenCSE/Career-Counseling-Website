@@ -5,7 +5,7 @@ import { FaEyeSlash, FaRegEye } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
 const Register = () => {
-    const { createNewUser, setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
+    const { createNewUser, setUser, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
 
     // State to manage password visibility
@@ -32,24 +32,17 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+                Swal.fire({
+                    title: 'Registration Successful!',
+                    text: 'You have successfully created an account.',
+                    icon: 'success',
+                    timer: 2000,
+                    showConfirmButton: false, 
+                });
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
 
-                updateUserProfile({ displayName: name, photoURL: photo })
-                    .then(() => {
-                        Swal.fire({
-                            title: 'Registration Successful!',
-                            text: 'You have successfully created an account.',
-                            icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false, 
-                        });
-
-                        setTimeout(() => {
-                            navigate(location?.state ? location.state : '/');
-                        }, 2000);
-                    })
-                    .catch((err) => {
-                        console.error(err);
-                    });
             })
             .catch((error) => {
                 const errorCode = error.code;

@@ -9,6 +9,7 @@ import Details from '../pages/Details';
 import Profile from '../components/Profile';
 import PrivateRoute from './PrivateRoute';
 import ContactUs from '../components/ContactUs';
+import UpdateProfile from '../components/UpdateProfile';
 
 
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     {
         path: '/contact',
         element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
+    },
+    {
+        path: '/update',
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
     },
     {
         path: '*',
