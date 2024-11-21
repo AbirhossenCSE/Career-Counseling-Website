@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
     const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,8 +27,8 @@ const Login = () => {
                     title: 'Login Successful!',
                     text: 'You have successfully logged into your account.',
                     icon: 'success',
-                    timer: 2000, 
-                    showConfirmButton: false, 
+                    timer: 2000,
+                    showConfirmButton: false,
                 });
 
                 setTimeout(() => {
@@ -52,8 +55,8 @@ const Login = () => {
                     title: 'Login Successful!',
                     text: 'You have successfully logged in with Google.',
                     icon: 'success',
-                    timer: 2000, 
-                    showConfirmButton: false, 
+                    timer: 2000,
+                    showConfirmButton: false,
                 });
 
                 setTimeout(() => {
@@ -86,7 +89,22 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                        <div className="relative">
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name='password'
+                                placeholder="password"
+                                className="input input-bordered w-full"
+                                required
+                            />
+                            <button
+                                type="button"
+                                className="absolute inset-y-0 right-2 flex items-center text-gray-600"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                        </div>
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
