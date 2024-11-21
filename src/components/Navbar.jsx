@@ -47,7 +47,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Career</a>
+                <a className="btn btn-ghost font-bold text-2xl p-2 ml-2">Career</a>
             </div>
 
             <div className="navbar-center hidden lg:flex">
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 src={user?.photoURL}
                                 alt="User Profile"
                             />
-                            <p className="absolute left-[-84px] bg-white text-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                            <p className="absolute left-[-104px] bg-white text-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                 {user?.displayName}
                             </p>
                         </div>
