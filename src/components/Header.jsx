@@ -1,49 +1,60 @@
 import React from 'react';
-import pic1 from '../../src/assets/1.jpg'
-import pic2 from '../../src/assets/2.jpg'
-import pic3 from '../../src/assets/3.jpg'
-import pic4 from '../../src/assets/4.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Header = () => {
+    const slides = [
+        {
+            id: 1,
+            image: "https://i.ibb.co/G3jCtxs/1.jpg",
+            title: "Career Planning Session",
+            description: "Plan your career with expert guidance.",
+        },
+        {
+            id: 2,
+            image: "https://i.ibb.co/Nszjk6c/2.jpg",
+            title: "Resume Building Assistance",
+            description: "Build a resume that stands out.",
+        },
+        {
+            id: 3,
+            image: "https://i.ibb.co/Y36M9GX/3.jpg",
+            title: "Mock Interview Sessions",
+            description: "Prepare for interviews with confidence.",
+        },
+    ];
+
     return (
-        <div className="carousel">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img
-                    src={pic1}
-                    className="w-full h-56" />
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img
-                    src={pic2}
-                    className="w-full h-56" />
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img
-                    src={pic3}
-                    className="w-full h-56" />
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img
-                    src={pic4}
-                    className="w-full h-56" />
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-        </div>
+        <header>
+            <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                loop={true}
+            >
+                {slides.map((slide) => (
+                    <SwiperSlide key={slide.id}>
+                        <div className="relative h-[400px]">
+                            <img
+                                src={slide.image}
+                                alt={slide.title}
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+                                <h2 className="text-4xl font-bold">{slide.title}</h2>
+                                <p className="text-lg mt-4">{slide.description}</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </header>
     );
 };
 

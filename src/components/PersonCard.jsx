@@ -8,7 +8,7 @@ const PersonCard = ({ person }) => {
             <div className="card bg-base-100 w-96">
                 <figure>
                     <img
-                        className='w-full p-2 h-[250px] rounded-sm'
+                        className='w-full p-2 h-[250px] rounded-xl'
                         src={person.image}
                         alt="councelor" />
                 </figure>

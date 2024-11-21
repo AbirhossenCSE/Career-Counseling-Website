@@ -16,7 +16,7 @@ const Details = () => {
             <div className="card bg-base-100 w-6/12 shadow-xl mx-auto mt-10">
                 <figure>
                     <img
-                        className="w-full p-2 h-[350px] rounded-sm"
+                        className="w-full p-2 h-[350px] rounded-xl"
                         src={image}
                         alt="counselor"
                     />

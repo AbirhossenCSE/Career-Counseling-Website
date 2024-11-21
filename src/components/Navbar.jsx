@@ -36,8 +36,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-2 mx-2">
-                    <Link to='/' className='mr-2'>Home</Link>
-                    <Link className='mr-2'>Service</Link>
+                    <Link to='/' className='mr-2'>Service</Link>
+                    <Link className='mr-2'>Profile</Link>
                     <Link to='/profile'>My Profile</Link>
                 </ul>
             </div>
