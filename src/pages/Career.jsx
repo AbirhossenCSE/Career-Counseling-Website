@@ -12,7 +12,7 @@ const Career = () => {
 
     return (
         <div className='w-11/12 mx-auto mt-5'>
-            <div className='grid md:grid-cols-3'>
+            <div className='grid md:grid-cols-3 bg-gray-50 p-8 rounded-md'>
                 {persons.map((person) => (
                     <PersonCard key={person.id} person={person}></PersonCard>
                 ))}

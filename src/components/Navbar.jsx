@@ -82,11 +82,11 @@ const Navbar = () => {
                 </div>
 
                 {user && user?.email ? (
-                    <button onClick={LogOut} className="btn btn-neutral rounded-none">
+                    <button onClick={LogOut} className="btn btn-neutral rounded-lg">
                         LogOut
                     </button>
                 ) : (
-                    <Link to="/auth/login" className="btn btn-neutral rounded-none">
+                    <Link to="/auth/login" className="btn btn-neutral rounded-lg">
                         Login
                     </Link>
                 )}

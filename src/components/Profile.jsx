@@ -8,7 +8,7 @@ const Profile = () => {
     const { user } = useContext(AuthContext);
     return (
         <div>
-            <nav className='w-11/12 mx-auto'>
+            <nav className='w-11/12 mx-auto p-2'>
                 <Navbar></Navbar>
             </nav>
 

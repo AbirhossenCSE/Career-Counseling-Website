@@ -44,7 +44,7 @@ const UpdateProfile = () => {
     return (
         <div>
 
-            <nav>
+            <nav className='w-11/12 mx-auto p-2'>
                 <Navbar></Navbar>
             </nav>
 
