@@ -73,22 +73,3 @@ const router = createBrowserRouter([
 
 export default router;
 
-
-
-
-
-
-
-
-// children: [
-//     {
-//         path: '/career',
-//         element: <Career></Career>,
-//     },
-// ],
-
-// const mainDataLoader = async ()=>{
-//     const response = await fetch('career.json')
-//     const data = await response.json()
-//     return data;
-// }

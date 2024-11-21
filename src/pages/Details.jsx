@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const Details = () => {
-    const person = useLoaderData(); // Get the data from the loader
+    const person = useLoaderData();
 
     const { serviceName, category, pricing, counselorName, rating, image, details } = person;
 

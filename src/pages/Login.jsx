@@ -20,7 +20,6 @@ const Login = () => {
                 const user = result.user;
                 setUser(user);
                 navigate(location?.state ? location.state : '/');
-                // navigate(location?.state ? location.state : '/');
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -31,10 +30,13 @@ const Login = () => {
     const handleGoogleSignIn = () =>{
         signInWithGoogle()
         .then(result =>{
-            console.log(result.user);
-            navigate('/')
+            navigate(location?.state ? location.state : '/');
+
         })
-        .catch(error => console.log('ERROR', error.message))
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+          });
     }
 
     return (
@@ -54,9 +56,6 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                        {/* {
-                            error.login && <label className='label text-sm text-red-600'> {error.login} </label>
-                        } */}
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>

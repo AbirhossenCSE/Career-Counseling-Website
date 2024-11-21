@@ -6,7 +6,7 @@ import Details from './Details';
 
 const Career = () => {
     const persons = useLoaderData();
-    console.log('Data', persons);
+
 
 
 
