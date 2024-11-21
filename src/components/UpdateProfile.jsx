@@ -24,16 +24,16 @@ const UpdateProfile = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
             .then(() => {
                 Swal.fire({
-                    title: 'Registration Successful!',
-                    text: 'You have successfully created an account.',
+                    title: 'Successfully Updated!',
+                    text: 'You have successfully update account.',
                     icon: 'success',
                     timer: 2000,
                     showConfirmButton: false,
                 });
             }).catch((error) => {
                 Swal.fire({
-                    title: 'Login Failed',
-                    text: 'Something went wrong while logging in with Google.',
+                    title: 'Update Failed',
+                    text: 'Something went wrong',
                     icon: 'error',
                     confirmButtonText: 'Try Again',
                 });

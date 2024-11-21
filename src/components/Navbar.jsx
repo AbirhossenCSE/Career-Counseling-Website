@@ -4,14 +4,14 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
     const { user, LogOut } = useContext(AuthContext);
-    const location = useLocation(); 
+    const location = useLocation();
 
     const getLinkClass = (path) => {
         if (path === '/' && location.pathname === '/') {
-            return 'text-primary font-bold underline'; 
+            return 'text-primary font-bold underline';
         }
         return location.pathname.startsWith(path) && path !== '/'
-            ? 'text-primary font-bold underline' 
+            ? 'text-primary font-bold underline'
             : 'hover:text-primary';
     };
 
@@ -39,7 +39,11 @@ const Navbar = () => {
                         <Link to="/" className={getLinkClass('/')}>Service</Link>
                         <Link to="/profile" className={getLinkClass('/profile')}>Profile</Link>
                         <Link to="/contact" className={getLinkClass('/contact')}>Contact Us</Link>
-                        <Link to="/update" className={getLinkClass('/update')}>Update Profile</Link>
+                        {
+                            user && <>
+                                <Link to="/update" className={getLinkClass('/update')}>Update Profile</Link>
+                            </>
+                        }
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Career</a>
@@ -50,7 +54,11 @@ const Navbar = () => {
                     <Link to="/" className={`mr-2 ${getLinkClass('/')}`}>Service</Link>
                     <Link to="/profile" className={`mr-2 ${getLinkClass('/profile')}`}>My Profile</Link>
                     <Link to="/contact" className={`mr-2 ${getLinkClass('/contact')}`}>Contact Us</Link>
-                    <Link to="/update" className={`mr-2 ${getLinkClass('/update')}`}>Update Profile</Link>
+                    {
+                            user && <>
+                                <Link to="/update" className={getLinkClass('/update')}>Update Profile</Link>
+                            </>
+                        }
                 </ul>
             </div>
 
