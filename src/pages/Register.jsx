@@ -144,7 +144,7 @@ const Register = () => {
                     Already Have An Account ? <Link className='text-red-500' to='/auth/login'>Login</Link>
                 </p>
 
-                <div className='w-6/6 mx-auto'>
+                <div className='w-6/6 mx-auto mt-2'>
                     <p onClick={handleGoogleSignIn} className='btn btn-ghost'>Login With Google</p>
                 </div>
             </div>

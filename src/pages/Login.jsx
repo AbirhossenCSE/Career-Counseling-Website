@@ -120,7 +120,7 @@ const Login = () => {
                     </Link>
                 </p>
 
-                <p onClick={handleGoogleSignIn} className='btn btn-ghost'>
+                <p onClick={handleGoogleSignIn} className='btn btn-ghost mt-2'>
                     Login With Google
                 </p>
             </div>
