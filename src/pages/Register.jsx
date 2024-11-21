@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FaEyeSlash, FaRegEye } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const { createNewUser, setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
@@ -31,9 +32,20 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        navigate(location?.state ? location.state : '/');
+                        Swal.fire({
+                            title: 'Registration Successful!',
+                            text: 'You have successfully created an account.',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false, 
+                        });
+
+                        setTimeout(() => {
+                            navigate(location?.state ? location.state : '/');
+                        }, 2000);
                     })
                     .catch((err) => {
                         console.error(err);
@@ -50,12 +62,29 @@ const Register = () => {
         signInWithGoogle()
             .then((result) => {
                 const user = result.user;
-                alert('Successfully logged in with Google!');
-                navigate(location?.state ? location.state : '/');
-                setUser(user);
+
+                Swal.fire({
+                    title: 'Login Successful!',
+                    text: 'You have successfully logged in with Google.',
+                    icon: 'success',
+                    timer: 2000, 
+                    showConfirmButton: false, 
+                });
+
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                    setUser(user);
+                }, 2000);
             })
             .catch((error) => {
                 console.error('ERROR', error.message);
+
+                Swal.fire({
+                    title: 'Login Failed',
+                    text: 'Something went wrong while logging in with Google.',
+                    icon: 'error',
+                    confirmButtonText: 'Try Again',
+                });
             });
     };
 
