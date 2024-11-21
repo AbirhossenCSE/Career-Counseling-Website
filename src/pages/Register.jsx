@@ -43,9 +43,7 @@ const Register = () => {
         .then(result =>{
             console.log(result.user);
             const user = result.user;
-            toast.success('Successfully logged in with Google!', {
-                position: toast.POSITION.TOP_RIGHT
-            });
+            alert('Successfully logged in with Google!');
             navigate('/');
             setUser(user)
         })
@@ -99,11 +97,10 @@ const Register = () => {
                 </form>
                 <p className='text-center font-semibold'>Already Have An Account ? <Link className='text-red-500' to='/auth/login'>Login</Link> </p>
 
-                <div>
+                <div className='w-6/6 mx-auto'>
                     <p onClick={handleGoogleSignIn} className='btn btn-ghost'>Login With Google</p>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };

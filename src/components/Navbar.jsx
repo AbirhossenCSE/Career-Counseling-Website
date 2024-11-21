@@ -32,22 +32,17 @@ const Navbar = () => {
                         <Link>Profile</Link>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Career Counseling Website</a>
+                <a className="btn btn-ghost text-xl">Career</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-2 mx-2">
                     <Link to='/' className='mr-2'>Home</Link>
                     <Link className='mr-2'>Service</Link>
-                    <Link>Profile</Link>
+                    <Link to='/profile'>My Profile</Link>
                 </ul>
             </div>
             <div className="navbar-end">
-                {/* <div>
-                    {
-                        user && user?.email ? ( <div><img className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> <p>{user?.displayName}</p></div> ) : ( <p>No User</p> )
-                    }
-                    
-            </div> */}
+               
                 <div className="relative group w-8 h-8 mr-5">
                     {user?.email ? (
                         <div className="flex flex-col items-center">
@@ -56,7 +51,7 @@ const Navbar = () => {
                                 src={user?.photoURL}
                                 alt="User Profile"
                             />
-                            <p className="absolute bottom-[-64px] bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                            <p className="absolute left-[-84px] bg-white text-white text-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                 {user?.displayName}
                             </p>
                         </div>

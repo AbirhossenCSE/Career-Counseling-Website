@@ -1,102 +1,112 @@
 [
-    {
-      "id": 1,
-      "image": "https://i.ibb.co.com/G3jCtxs/1.jpg",
-      "serviceName": "Career Planning Session",
-      "category": "Planning & Strategy",
-      "pricing": 50,
-      "counselorName": "Dr. Emily Carter",
-      "rating": 4.8,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 2,
-      "image": "https://i.ibb.co.com/Nszjk6c/2.jpg",
-      "serviceName": "Resume Building Assistance",
-      "category": "Job Application Support",
-      "pricing": 30,
-      "counselorName": "Mr. David Lee",
-      "rating": 4.6,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 3,
-      "image": "https://i.ibb.co.com/Y36M9GX/3.jpg",
-      "serviceName": "Mock Interview Sessions",
-      "category": "Skill Development",
-      "pricing": 40,
-      "counselorName": "Ms. Sarah Johnson",
-      "rating": 4.9,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 4,
-      "image": "https://i.ibb.co.com/3SyJwsG/4.jpg",
-      "serviceName": "Skill Assessment",
-      "category": "Career Evaluation",
-      "pricing": 20,
-      "counselorName": "Dr. Michael Brown",
-      "rating": 4.7,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 5,
-      "image": "https://i.ibb.co.com/0y8fnpz/5.jpg",
-      "serviceName": "Networking Tips & Tricks",
-      "category": "Professional Growth",
-      "pricing": 25,
-      "counselorName": "Ms. Anna Wilson",
-      "rating": 4.5,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 6,
-      "image": "https://i.ibb.co.com/pjzJmqp/6.jpg",
-      "serviceName": "Industry Insights & Trends",
-      "category": "Market Research",
-      "pricing": 35,
-      "counselorName": "Dr. Richard Green",
-      "rating": 4.6,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 7,
-      "image": "https://i.ibb.co.com/sP5Nzbr/7.jpg",
-      "serviceName": "Career Change Guidance",
-      "category": "Transition Support",
-      "pricing": 45,
-      "counselorName": "Ms. Olivia Martinez",
-      "rating": 4.8,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 8,
-      "image": "https://i.ibb.co.com/wCTB716/8.jpg",
-      "serviceName": "Personal Branding Strategies",
-      "category": "Professional Growth",
-      "pricing": 50,
-      "counselorName": "Mr. Chris Evans",
-      "rating": 4.9,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 9,
-      "image": "https://i.ibb.co.com/zF9tj9X/9.jpg",
-      "serviceName": "Scholarship Application Guidance",
-      "category": "Educational Support",
-      "pricing": 30,
-      "counselorName": "Ms. Laura Smith",
-      "rating": 4.7,
-      "learnMore": "Read More"
-    },
-    {
-      "id": 10,
-      "image": "https://i.ibb.co.com/9VR19Tt/10.jpg",
-      "serviceName": "Certification Pathways",
-      "category": "Skill Enhancement",
-      "pricing": 40,
-      "counselorName": "Dr. Daniel Moore",
-      "rating": 4.6,
-      "learnMore": "Read More"
-    }
-  ]
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/G3jCtxs/1.jpg",
+    "serviceName": "Career Planning Session",
+    "category": "Planning & Strategy",
+    "pricing": 50,
+    "counselorName": "Dr. Emily Carter",
+    "rating": 4.8,
+    "learnMore": "Read More",
+    "details": "A comprehensive session aimed at helping you outline your career goals and create actionable plans to achieve them. Dr. Emily Carter has 10+ years of experience in career counseling."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/Nszjk6c/2.jpg",
+    "serviceName": "Resume Building Assistance",
+    "category": "Job Application Support",
+    "pricing": 30,
+    "counselorName": "Mr. David Lee",
+    "rating": 4.6,
+    "learnMore": "Read More",
+    "details": "Enhance your resume with professional guidance from Mr. David Lee. This service is tailored to highlight your strengths and improve your chances of getting noticed by employers."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/Y36M9GX/3.jpg",
+    "serviceName": "Mock Interview Sessions",
+    "category": "Skill Development",
+    "pricing": 40,
+    "counselorName": "Ms. Sarah Johnson",
+    "rating": 4.9,
+    "learnMore": "Read More",
+    "details": "Prepare for interviews with mock sessions conducted by Ms. Sarah Johnson, a seasoned HR professional. Get constructive feedback to boost your confidence and skills."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/3SyJwsG/4.jpg",
+    "serviceName": "Skill Assessment",
+    "category": "Career Evaluation",
+    "pricing": 20,
+    "counselorName": "Dr. Michael Brown",
+    "rating": 4.7,
+    "learnMore": "Read More",
+    "details": "Identify your strengths and areas for improvement with a personalized skill assessment by Dr. Michael Brown. Get detailed insights and recommendations."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/0y8fnpz/5.jpg",
+    "serviceName": "Networking Tips & Tricks",
+    "category": "Professional Growth",
+    "pricing": 25,
+    "counselorName": "Ms. Anna Wilson",
+    "rating": 4.5,
+    "learnMore": "Read More",
+    "details": "Learn the art of networking with tips and strategies from Ms. Anna Wilson. Build meaningful connections to advance your professional journey."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/pjzJmqp/6.jpg",
+    "serviceName": "Industry Insights & Trends",
+    "category": "Market Research",
+    "pricing": 35,
+    "counselorName": "Dr. Richard Green",
+    "rating": 4.6,
+    "learnMore": "Read More",
+    "details": "Stay ahead in your career with insights into the latest industry trends, provided by Dr. Richard Green. Learn about emerging opportunities in your field."
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/sP5Nzbr/7.jpg",
+    "serviceName": "Career Change Guidance",
+    "category": "Transition Support",
+    "pricing": 45,
+    "counselorName": "Ms. Olivia Martinez",
+    "rating": 4.8,
+    "learnMore": "Read More",
+    "details": "Thinking of changing careers? Let Ms. Olivia Martinez guide you through the transition process with expert advice and planning strategies."
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/wCTB716/8.jpg",
+    "serviceName": "Personal Branding Strategies",
+    "category": "Professional Growth",
+    "pricing": 50,
+    "counselorName": "Mr. Chris Evans",
+    "rating": 4.9,
+    "learnMore": "Read More",
+    "details": "Create a strong personal brand with guidance from Mr. Chris Evans. Enhance your professional image and stand out in a competitive job market."
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/zF9tj9X/9.jpg",
+    "serviceName": "Scholarship Application Guidance",
+    "category": "Educational Support",
+    "pricing": 30,
+    "counselorName": "Ms. Laura Smith",
+    "rating": 4.7,
+    "learnMore": "Read More",
+    "details": "Get expert assistance with scholarship applications from Ms. Laura Smith. Improve your chances of securing financial aid for your studies."
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/9VR19Tt/10.jpg",
+    "serviceName": "Certification Pathways",
+    "category": "Skill Enhancement",
+    "pricing": 40,
+    "counselorName": "Dr. Daniel Moore",
+    "rating": 4.6,
+    "learnMore": "Read More",
+    "details": "Discover the best certification courses to enhance your skills with guidance from Dr. Daniel Moore. Plan your professional development journey effectively."
+  }
+]

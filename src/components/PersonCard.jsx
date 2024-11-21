@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const PersonCard = ({ person }) => {
     const { serviceName, category, pricing, counselorName, rating, learnMore, image, id } = person;
     return (
-        <div>
-            <div className="card bg-base-100 w-96 shadow-xl">
+        <div className='mx-auto'>
+            <div className="card bg-base-100 w-96">
                 <figure>
                     <img
                         className='w-full p-2 h-[250px] rounded-sm'
