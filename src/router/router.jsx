@@ -14,10 +14,6 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <HomeLayout></HomeLayout>,
-        loader: async () => {
-            const res = await fetch('/services.json');
-            return res.json(); // Fetch data once at the parent level
-        },
         children:[
             {
                 path: '/',
@@ -31,7 +27,13 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <Details></Details>,
+                loader: async ({ params }) => {
+                    const response = await fetch('/career.json'); // Fetch all data
+                    const services = await response.json();
+                    return services.find((service) => service.id === parseInt(params.id)); // Find the service by ID
+                },
             },
+
         ]
        
     },

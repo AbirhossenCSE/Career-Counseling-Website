@@ -7,8 +7,7 @@ import Details from './Details';
 const Career = () => {
     const persons = useLoaderData();
     console.log('Data', persons);
-    const services = useLoaderData();
-    console.log('Service', services);
+
 
 
     return (
@@ -17,12 +16,6 @@ const Career = () => {
             <div className='grid grid-cols-3'>
                 {persons.map((person) => (
                     <PersonCard key={person.id} person={person}></PersonCard>
-                ))}
-            </div>
-
-            <div className="grid grid-cols-3 gap-6">
-                {services.map((service) => (
-                    <Details key={service.id} service={service}></Details>
                 ))}
             </div>
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PersonCard = ({ person}) => {
-    const { serviceName, category, pricing, counselorName, rating, learnMore, image } = person;
+const PersonCard = ({ person }) => {
+    const { serviceName, category, pricing, counselorName, rating, learnMore, image, id } = person;
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
@@ -19,8 +19,8 @@ const PersonCard = ({ person}) => {
                     <p>Name: {counselorName}</p>
                     <p>Ratting {rating}</p>
                     <div className="card-actions justify-end">
-                        <Link>
-                            <button className="btn btn-primary">View Details</button>
+                        <Link to={`/details/${id}`}>
+                            <button className="btn btn-primary">Learn More</button>
                         </Link>
                     </div>
                 </div>
