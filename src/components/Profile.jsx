@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import Navbar from './Navbar';
 import { AuthContext } from '../provider/AuthProvider';
+import Footer from './Footer';
+
 
 const Profile = () => {
     const { user } = useContext(AuthContext);
@@ -23,6 +25,10 @@ const Profile = () => {
                     
                 </div>
             </div>
+
+            <footer className='mt-64'>
+                <Footer></Footer>
+            </footer>
 
         </div>
     );

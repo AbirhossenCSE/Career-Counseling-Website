@@ -8,6 +8,7 @@ import Register from '../pages/Register';
 import Details from '../pages/Details';
 import Profile from '../components/Profile';
 import PrivateRoute from './PrivateRoute';
+import ContactUs from '../components/ContactUs';
 
 
 
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
     {
         path: '/profile',
         element: <PrivateRoute><Profile></Profile></PrivateRoute>,
+    },
+    {
+        path: '/contact',
+        element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
     },
     {
         path: '*',
