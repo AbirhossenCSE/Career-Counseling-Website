@@ -25,7 +25,7 @@ const UpdateProfile = () => {
             .then(() => {
                 Swal.fire({
                     title: 'Successfully Updated!',
-                    text: 'You have successfully update account.',
+                    text: 'Successfully Update Account.',
                     icon: 'success',
                     timer: 2000,
                     showConfirmButton: false,

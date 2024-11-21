@@ -10,7 +10,7 @@ const Details = () => {
     return (
 
         <div>
-            <nav>
+            <nav className='w-11/12 mx-auto'>
                 <Navbar></Navbar>
             </nav>
             <div className="card bg-base-100 w-6/12 shadow-xl mx-auto mt-10">
@@ -22,11 +22,11 @@ const Details = () => {
                     />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title text-3xl">{serviceName}</h2>
-                    <p>Category: {category}</p>
-                    <p>Pricing: $ {pricing}</p>
-                    <p>Name: {counselorName}</p>
-                    <p>Rating: {rating}</p>
+                    <h2 className="card-title text-3xl font-bold">{serviceName}</h2>
+                    <p><span className='font-bold'>Category:</span> {category}</p>
+                    <p><span className='font-bold'>Pricing: </span> ${pricing}</p>
+                    <p><span className='font-bold'>Name:</span> {counselorName}</p>
+                    <p><span className='font-bold'>Rating:</span> {rating}</p>
                     <p><span className='font-bold'>Details:</span> {details}</p>
                     <Link to='/'>
                         <button className='btn btn-neutral'>Back Home</button>
